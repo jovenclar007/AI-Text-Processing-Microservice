@@ -1,0 +1,11 @@
+# MSIT 132 Reflection
+
+MSIT 132 prepared me for my capstone by giving me practical experience in advanced programming, API development, concurrency, containerization, optimization, testing, usability, and AI integration. Instead of treating these topics as separate programming exercises, this project allowed me to combine them into one small but complete microservice.
+
+My microservice is an AI Text Processing Microservice. It can become a reusable component of a larger capstone system because another application can send text to the service through REST API calls. The `/translate` endpoint demonstrates AI integration by sending a translation request to Google Gemini. The `/analyze-text` endpoint performs local computation such as word count, character count, sentence count, longest word, and estimated reading time. The `/batch-analyze` endpoint processes several independent text-analysis tasks concurrently.
+
+One of the main challenges was connecting the application to an external AI API while keeping the API key secure and making the service easy to run. I also had to understand how Flask routes communicate with service modules and how Docker packages the application and its dependencies. Testing the translation feature was another challenge because external API requests can depend on network availability and API limits. To solve this, the automated translation test uses a mock response instead of calling Gemini every time.
+
+I also applied a simple optimization using an in-memory cache. When the same text is analyzed repeatedly, the application can reuse the previous result instead of performing the same calculation again. I used Python's `timeit` module to measure the difference. In addition, concurrency was demonstrated through `ThreadPoolExecutor` in the batch endpoint.
+
+For future improvements, I would add authentication, request logging, stronger rate limiting, a database for saved results, more advanced text analysis, and a frontend interface. I would also add monitoring and deploy the service to a cloud platform. Overall, MSIT 132 helped me understand how individual programming concepts can be integrated into a practical, modular, and deployable microservice.

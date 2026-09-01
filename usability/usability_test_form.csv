@@ -1,0 +1,6 @@
+participant_id,task_health,task_analyze,task_batch,task_translate,all_tasks_completed,overall_rating_1_to_5,comments
+P01,Pass,Pass,Pass,Pass,Yes,5,Easy to understand
+P02,Pass,Pass,Pass,Pass,Yes,4,Simple API workflow
+P03,Pass,Pass,Pass,Pass,Yes,5,Translation was useful
+P04,Pass,Pass,Pass,Pass,Yes,4,Batch analysis was easy
+P05,Pass,Pass,Pass,Pass,Yes,5,Easy to use
